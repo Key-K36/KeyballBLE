@@ -31,6 +31,7 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
         mkp_exit_AML: mkp_exit_AML {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -72,10 +73,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                              &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &mkp LCLK                          &kp BACKSLASH      &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mkp RCLK                          &kp RIGHT_BRACKET  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE      &lt 1 ENTER                             &kp DEL
+&mt Q TAB         &kp W         &kp E         &kp R                       &kp T                                                      &kp Y              &kp U  &lt 5 I    &lt 5 O  &kp P
+&kp A             &kp S         &kp D         &kp F                       &kp G        &kp ESCAPE       &kp MINUS                    &kp H              &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                       &kp B        &kp DELETE       &kp BACKSPACE                &kp N              &kp M  &kp COMMA  &kp DOT  &kp UP_ARROW
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LA(GRAVE)  &lt 3 SPACE  &lt 1 ENTER      &lt_to_layer_0 6 LEFT_ARROW  &lt 2 RIGHT_ARROW                             &lt 2 DOWN_ARROW
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
