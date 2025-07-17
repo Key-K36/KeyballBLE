@@ -11,11 +11,7 @@
         7 // I
         9 // P
         19 // K
-        20 // L
-        21 // ENTER
         31 // COMMA
-        32 // DOT
-        33 // UP_ARROW
     >;
 
     require-prior-idle-ms = <200>;
