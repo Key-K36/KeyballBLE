@@ -21,9 +21,13 @@
     combos {
         compatible = "zmk,combos";
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <1 2>;
+        };
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <8 9>;
         };
     };
 
@@ -97,7 +101,7 @@
 
         default_layer {
             bindings = <
-&mt Q TAB                         &kp W         &kp E         &kp R                   &kp T                                                                     &kp Y                         &kp U  &lt 5 I    &lt 5 O  &kp P
+&mt Q                             &kp W         &kp E         &kp R                   &kp T                                                                     &kp Y                         &kp U  &lt 5 I    &lt 5 O  &kp P
 &kp A                             &kp S         &kp D         &kp F                   &kp G            &kp ESCAPE                  &kp MINUS                    &kp H                         &kp J  &kp K      &kp L    &kp ENTER
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B            &kp DELETE                  &kp BACKSPACE                &kp N                         &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RIGHT_SHIFT UP_ARROW
 &kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 ENTER  &lt 3 LA(GRAVE)  &lt_to_layer_0 1 SPACE      &lt_to_layer_0 6 LEFT_ARROW  &lt_to_layer_0 2 RIGHT_ARROW                             &lt_to_layer_0 2 DOWN_ARROW
