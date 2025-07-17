@@ -26,8 +26,8 @@
             key-positions = <1 2>;
         };
 
-        delete {
-            bindings = <&kp DELETE>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
         };
     };
@@ -142,10 +142,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &mkp MB1  &trans  &mkp MB2
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB5  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB4  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &mkp MB1  &trans           &mkp MB2
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB5  &kp LS(LC(TAB))  &kp LC(TAB)
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB4  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                     &trans
             >;
         };
 
