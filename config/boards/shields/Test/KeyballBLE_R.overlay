@@ -8,14 +8,10 @@
 
 &zip_temp_layer {
     excluded-positions = <
-        7 // I
+        8 // O
         9 // P
-        19 // K
         20 // L
-        21 // ENTER
-        31 // COMMA
         32 // DOT
-        33 // MINUS
     >;
 
     require-prior-idle-ms = <200>;
