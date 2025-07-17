@@ -125,7 +125,7 @@
 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK  &kp SLASH                                       &kp F2         &kp F4     &kp F9             &kp F10                 &kp F12
 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS      &kp MINUS  &kp LC(LA(KP_NUMBER_0))      &trans  &kp LA(LC(M))  &kp LA(M)  &kp LS(LA(RIGHT))  &kp LS(LA(LEFT_ARROW))  &kp LS(LC(L))
 &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT       &kp EQUAL  &trans                       &trans  &trans         &trans     &trans             &trans                  &trans
-&kp KP_NUMBER_0  &trans           &trans           &trans        &trans     &trans                       &trans  &trans                                                               &trans
+&kp KP_NUMBER_0  &trans           &trans           &trans        &kp F7     &trans                       &trans  &trans                                                               &trans
             >;
         };
 
