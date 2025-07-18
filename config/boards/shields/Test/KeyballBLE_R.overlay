@@ -4,6 +4,15 @@
     col-offset = <6>;
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+        8 //
+        9 //
+        20 //
+        21 //
+    >;
+};
+
 
 / {
     trackball_listener {
