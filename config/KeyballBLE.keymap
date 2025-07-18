@@ -247,8 +247,8 @@
         default_layer {
             bindings = <
 &mt_exit_AML_on_tap Q TAB         &kp_exit_AML W                  &kp_exit_AML E                  &kp_exit_AML R             &kp_exit_AML T                                                                                &kp_exit_AML Y                &kp_exit_AML U  &lt_exit_AML 5 I    &lt_exit_AML 5 O  &kp_exit_AML P
-&lt_exit_AML 1 A                  &kp_exit_AML S                  &kp_exit_AML D                  &kp_exit_AML F             &kp_exit_AML G             &kp_exit_AML LC(LEFT_GUI)            &kp_exit_AML F7               &kp_exit_AML H                &kp_exit_AML J  &kp_exit_AML K      &kp_exit_AML L    &lt_exit_AML 1 ENTER
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp_exit_AML X                  &kp_exit_AML C                  &kp_exit_AML V             &kp_exit_AML B             &mt_exit_AML LA(GRAVE) UP_ARROW      &kp_exit_AML LA(GRAVE)        &kp_exit_AML N                &kp_exit_AML M  &kp_exit_AML COMMA  &kp_exit_AML DOT  &mt_exit_AML_on_tap RIGHT_SHIFT BACKSLASH
+&lt_exit_AML 1 A                  &kp_exit_AML S                  &kp_exit_AML D                  &kp_exit_AML F             &kp_exit_AML G             &kp_exit_AML LC(LEFT_GUI)            &kp_exit_AML INT_HENKAN       &kp_exit_AML H                &kp_exit_AML J  &kp_exit_AML K      &kp_exit_AML L    &lt_exit_AML 1 ENTER
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp_exit_AML X                  &kp_exit_AML C                  &kp_exit_AML V             &kp_exit_AML B             &mt_exit_AML LA(GRAVE) UP_ARROW      &kp_exit_AML INT5             &kp_exit_AML N                &kp_exit_AML M  &kp_exit_AML COMMA  &kp_exit_AML DOT  &mt_exit_AML_on_tap RIGHT_SHIFT BACKSLASH
 &mod_exit_AML LCTRL               &mt_exit_AML LEFT_WIN LEFT_GUI  &mt_exit_AML LEFT_ALT LEFT_ALT  &lt_exit_AML 6 LEFT_ARROW  &lt_exit_AML 2 DOWN_ARROW  &lt_exit_AML 3 RIGHT_ARROW           &lt_exit_AML_on_hold 3 SPACE  &lt_exit_AML_on_hold 2 SPACE                                                        &kp_exit_AML DELETE
             >;
 
