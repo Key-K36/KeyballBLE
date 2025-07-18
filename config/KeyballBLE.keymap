@@ -68,6 +68,12 @@
             key-positions = <8 9>;
             layers = <1>;
         };
+
+        underscore {
+            bindings = <&kp LS(MINUS)>;
+            key-positions = <32 42>;
+            layers = <0>;
+        };
     };
 
     macros {
