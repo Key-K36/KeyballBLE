@@ -228,7 +228,6 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
-    };
 };
 
     keymap {
