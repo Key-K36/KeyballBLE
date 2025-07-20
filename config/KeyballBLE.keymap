@@ -83,6 +83,54 @@
             key-positions = <37 38>;
             layers = <0>;
         };
+
+        auto_calculation {
+            bindings = <&kp LA(LC(M))>;
+            key-positions = <10 24>;
+            layers = <3>;
+        };
+
+        auto_calculation_off {
+            bindings = <&kp LA(M)>;
+            key-positions = <10 24 8>;
+            layers = <3>;
+        };
+
+        win_hold {
+            bindings = <&window_hold>;
+            key-positions = <1 17>;
+            layers = <3>;
+        };
+
+        group_on {
+            bindings = <&kp LS(LA(RIGHT_ARROW))>;
+            key-positions = <14 8>;
+            layers = <3>;
+        };
+
+        group_off {
+            bindings = <&kp LA(LS(LEFT_ARROW))>;
+            key-positions = <14 8 13>;
+            layers = <3>;
+        };
+
+        auto_fil {
+            bindings = <&kp LS(LC(L))>;
+            key-positions = <10 13>;
+            layers = <3>;
+        };
+
+        remove_duplicates {
+            bindings = <&remove_duplicates>;
+            key-positions = <3 12>;
+            layers = <3>;
+        };
+
+        merging_cells {
+            bindings = <&merging_cells>;
+            key-positions = <24 19>;
+            layers = <3>;
+        };
     };
 
     macros {
@@ -381,17 +429,17 @@
             bindings = <
 &kp KP_NUMBER_7               &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK  &kp KP_DIVIDE                                                            &trans  &kp F10  &kp F7  &kp F8  &kp F9
 &kp KP_NUMBER_4               &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS                        &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6
-&mt LC(NUMBER_1) KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &kp KP_EQUAL                        &trans                       &trans  &trans  &kp F12  &kp F1  &kp F2  &kp F3
+&mt LC(NUMBER_1) KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &sum                                &trans                       &trans  &trans  &kp F12  &kp F1  &kp F2  &kp F3
 &kp KP_NUMBER_0               &trans           &trans           &kp LC(PAGE_UP)  &mt_exit_AML LEFT_SHIFT LEFT_SHIFT  &kp LC(PAGE_DOWN)            &trans  &trans                           &trans
             >;
         };
 
         SHORTCUT {
             bindings = <
-&kp LA(LC(M))  &kp LA(M)  &trans  &trans  &trans                      &kp LS(LA(RIGHT_ARROW))  &kp LS(LA(LEFT_ARROW))  &kp LS(LC(L))  &trans  &trans
-&trans         &trans     &trans  &trans  &trans  &trans      &trans  &trans                   &trans                  &trans         &trans  &trans
-&trans         &trans     &trans  &trans  &trans  &trans      &trans  &trans                   &trans                  &trans         &trans  &trans
-&trans         &trans     &trans  &trans  &trans  &trans      &trans  &trans                                                                  &trans
+&trans  &trans  &trans  &round    &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &vlookup  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
