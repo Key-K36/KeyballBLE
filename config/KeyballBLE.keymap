@@ -161,11 +161,95 @@
             label = "MKP_EXIT_AML";
         };
 
-        choufuku: choufuku {
+        remove_duplicates: choufuku {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp A &kp M>;
             label = "CHOUFUKU";
+        };
+
+        window_hold: window_hold {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp W &kp F &kp F>;
+            label = "WINDOW_HOLD";
+        };
+
+        merging_cells: merging_cells {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp M &kp C>;
+            label = "MERGING_CELLS";
+        };
+
+        left_alignment: left_alignment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp A &kp L>;
+            label = "LEFT_ALIGNMENT";
+        };
+
+        center_alignment: center_alignment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp A &kp C>;
+            label = "CENTER_ALIGNMENT";
+        };
+
+        right_alignment: right_alignment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp A &kp R>;
+            label = "RIGHT_ALIGNMENT";
+        };
+
+        top_alignment: top_alignment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp A &kp T>;
+            label = "TOP_ALIGNMENT";
+        };
+
+        vertical_center_alignment: vertical_center_alignment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp A &kp M>;
+            label = "VERTICAL_CENTER_ALIGNMENT";
+        };
+
+        bottom_alignment: bottom_alignment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp H &kp A &kp B>;
+            label = "BOTTOM_ALIGNMENT";
+        };
+
+        sum: sum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp M &kp U &kp S>;
+            label = "SUM";
+        };
+
+        sumproduct: sumproduct {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp S &kp U &kp M &kp P &kp R &kp O &kp D &kp U &kp C &kp T &kp LEFT_PARENTHESIS>;
+            label = "SUMPRODUCT";
+        };
+
+        vlookup: vlookup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp I &kp F &kp N &kp A &kp LEFT_PARENTHESIS &kp V &kp L &kp O &kp O &kp K &kp U &kp P &kp LEFT_PARENTHESIS>;
+            label = "VLOOKUP";
+        };
+
+        round: round {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp R &kp O &kp U &kp N &kp D &kp LEFT_PARENTHESIS &kp LEFT_PARENTHESIS>;
+            label = "ROUND";
         };
     };
 
