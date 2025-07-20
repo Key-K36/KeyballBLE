@@ -21,7 +21,7 @@
         backspace {
             bindings = <&kp_exit_AML BACKSPACE>;
             key-positions = <8 9>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         minus {
@@ -32,19 +32,19 @@
 
         left_bracket {
             bindings = <&kp_exit_AML LEFT_BRACKET>;
-            key-positions = <20 21>;
+            key-positions = <21 33>;
             layers = <0>;
         };
 
         right_bracket {
             bindings = <&kp_exit_AML RIGHT_BRACKET>;
-            key-positions = <32 33>;
+            key-positions = <33 42>;
             layers = <0>;
         };
 
         at_sign {
             bindings = <&kp_exit_AML AT_SIGN>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
             layers = <0>;
         };
 
@@ -68,7 +68,7 @@
 
         underscore {
             bindings = <&kp_exit_AML LS(MINUS)>;
-            key-positions = <32 42>;
+            key-positions = <32 33>;
             layers = <0>;
         };
 
