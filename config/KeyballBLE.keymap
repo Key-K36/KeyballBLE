@@ -19,7 +19,7 @@
         compatible = "zmk,combos";
 
         backspace {
-            bindings = <&kp_exit_AML BACKSPACE>;
+            bindings = <&mt_exit_AML_on_hold BACKSPACE BACKSPACE>;
             key-positions = <8 9>;
             layers = <0 4>;
         };
@@ -288,10 +288,10 @@
 
         NUM {
             bindings = <
-&kp KP_NUMBER_7               &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK  &kp KP_DIVIDE                                       &trans  &kp F10  &kp F7  &kp F8  &kp F9
-&kp KP_NUMBER_4               &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS   &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6
-&mt LC(NUMBER_1) KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &kp KP_EQUAL   &trans                       &trans  &trans  &kp F12  &kp F1  &kp F2  &kp F3
-&kp KP_NUMBER_0               &trans           &trans           &kp LC(PAGE_UP)  &trans         &kp LC(PAGE_DOWN)            &trans  &trans                           &trans
+&kp KP_NUMBER_7               &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK  &kp KP_DIVIDE                                                            &trans  &kp F10  &kp F7  &kp F8  &kp F9
+&kp KP_NUMBER_4               &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS                        &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6
+&mt LC(NUMBER_1) KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &kp KP_EQUAL                        &trans                       &trans  &trans  &kp F12  &kp F1  &kp F2  &kp F3
+&kp KP_NUMBER_0               &trans           &trans           &kp LC(PAGE_UP)  &mt_exit_AML LEFT_SHIFT LEFT_SHIFT  &kp LC(PAGE_DOWN)            &trans  &trans                           &trans
             >;
         };
 
