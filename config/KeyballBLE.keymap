@@ -427,7 +427,7 @@
             bindings = <
 &mt_exit_AML_on_tap Q TAB               &kp_exit_AML W                  &kp_exit_AML E                  &kp_exit_AML R             &kp_exit_AML T                                                                                    &kp_exit_AML Y                &kp_exit_AML U  &kp_exit_AML I      &kp_exit_AML O    &kp_exit_AML P
 &lt_exit_AML 1 A                        &kp_exit_AML S                  &kp_exit_AML D                  &kp_exit_AML F             &kp_exit_AML G           &kp_exit_AML LC(LEFT_GUI)      &kp_exit_AML F7                           &kp_exit_AML H                &kp_exit_AML J  &lt_exit_AML 5 K    &kp_exit_AML L    &lt_exit_AML 1 ENTER
-&mt_exit_AML_on_tap LEFT_SHIFT Z        &kp_exit_AML X                  &kp_exit_AML C                  &kp_exit_AML V             &kp_exit_AML B           &kp_exit_AML UP_ARROW          &kp_exit_AML LA(GRAVE)                    &kp_exit_AML N                &kp_exit_AML M  &kp_exit_AML COMMA  &kp_exit_AML DOT  &mt_exit_AML_on_tap RIGHT_SHIFT SLASH
+&mt_exit_AML_on_tap LEFT_SHIFT Z        &kp_exit_AML X                  &kp_exit_AML C                  &kp_exit_AML V             &kp_exit_AML B           &kp_exit_AML UP_ARROW          &kp_exit_AML LS(CAPSLOCK)                 &kp_exit_AML N                &kp_exit_AML M  &kp_exit_AML COMMA  &kp_exit_AML DOT  &mt_exit_AML_on_tap RIGHT_SHIFT SLASH
 &mt_exit_AML_on_tap LCTRL LEFT_CONTROL  &mt_exit_AML LEFT_WIN LEFT_GUI  &mt_exit_AML LEFT_ALT LEFT_ALT  &lt_exit_AML 6 LEFT_ARROW  &kp_exit_AML DOWN_ARROW  &kp_exit_AML RIGHT_ARROW       &mt_exit_AML_on_hold BACKSPACE BACKSPACE  &lt_exit_AML_on_hold 2 SPACE                                                        &lt_exit_AML 2 DELETE
             >;
 
@@ -454,10 +454,10 @@
 
         PASS {
             bindings = <
-&trans  &trans  &trans  &trans    &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &vlookup  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
