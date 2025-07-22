@@ -149,6 +149,24 @@
             key-positions = <22 34>;
             layers = <2>;
         };
+
+        paste_fomulas_only {
+            bindings = <&paste_formulas_only>;
+            key-positions = <13 9>;
+            layers = <2>;
+        };
+
+        transpose_and_paste {
+            bindings = <&transpose_and_paste>;
+            key-positions = <9 4>;
+            layers = <2>;
+        };
+
+        paste_memo_only {
+            bindings = <&paste_memo_only>;
+            key-positions = <9 30>;
+            layers = <2>;
+        };
     };
 
     macros {
@@ -321,9 +339,32 @@
         shift_click: shift_crick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mod_exit_AML LEFT_SHIFT &mkp LCLK>, <&macro_press>;
+            bindings =
+                <&mod_exit_AML LEFT_SHIFT &mkp_exit_AML LCLK>,
+                <&macro_press>;
 
             label = "SHIFT_CRICK";
+        };
+
+        paste_formulas_only: paste_formulas_only {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp E &kp S &kp F &kp ENTER>;
+            label = "PASTE_FORMULAS_ONLY";
+        };
+
+        transpose_and_paste: transpose_and_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp E &kp S &kp E &kp V &kp ENTER>;
+            label = "TRANSPOSE_AND_PASTE";
+        };
+
+        paste_memo_only: paste_memo_only {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp E &kp S &kp C &kp ENTER>;
+            label = "PASTE_MEMO_ONLY";
         };
     };
 
@@ -473,7 +514,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                           &trans  &trans  &shift_click                          &mkp_exit_AML LCLK            &mkp_exit_AML RCLK
 &trans  &trans  &trans  &trans  &trans  &trans      &trans                                       &trans  &trans  &lt_exit_AML_on_tap 5 LA(LEFT_ARROW)  &kp_exit_AML LA(RIGHT_ARROW)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mt_exit_AML_on_tap LEFT_SHIFT LS(CAPSLOCK)  &trans  &trans  &mt_exit_AML LA(LS(K)) LA(PAGE_UP)    &kp_exit_AML LA(PAGE_DOWN)    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mt_exit_AML_on_tap LEFT_SHIFT LS(CAPSLOCK)  &trans  &trans  &mt_exit_AML LA(LS(K)) LA(UP_ARROW)   &kp_exit_AML LA(DOWN_ARROW)   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans                                       &trans                                                                              &trans
             >;
         };
