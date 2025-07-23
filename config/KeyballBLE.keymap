@@ -85,13 +85,13 @@
         };
 
         auto_calculation {
-            bindings = <&kp LA(LC(M))>;
+            bindings = <&auto_calculation>;
             key-positions = <24 8>;
             layers = <2>;
         };
 
         auto_calculation_off {
-            bindings = <&kp LA(M)>;
+            bindings = <&auto_calculation_off>;
             key-positions = <24 13>;
             layers = <2>;
         };
@@ -371,6 +371,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp E &kp S &kp C &kp ENTER>;
             label = "PASTE_MEMO_ONLY";
+        };
+
+        auto_calculation: auto_calculation {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp M &kp X &kp A>;
+            label = "AUTO_CALCULATION";
+        };
+
+        auto_calculation_off: auto_calculation_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp M &kp X &kp M>;
+            label = "AUTO_CALCULATION_OFF";
         };
     };
 
