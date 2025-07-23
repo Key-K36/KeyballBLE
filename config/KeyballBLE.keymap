@@ -167,6 +167,12 @@
             key-positions = <9 30>;
             layers = <2>;
         };
+
+        language {
+            bindings = <&kp_exit_AML LS(CLCK)>;
+            key-positions = <0 1>;
+            layers = <0 2 1 3 4>;
+        };
     };
 
     macros {
@@ -494,10 +500,10 @@
 
         NUM_SHORTCUT {
             bindings = <
-&kp KP_NUMBER_7               &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK                        &kp KP_DIVIDE                                                &trans  &kp F10  &kp F7  &kp F8  &kp F9
-&kp KP_NUMBER_4               &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                            &kp KP_MINUS   &kp LC(LA(KP_NUMBER_0))               &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6
-&mt LEFT_SHIFT KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT                             &sum           &trans                                &trans  &trans  &kp F12  &kp F1  &kp F2  &kp F3
-&mt LEFT_CONTROL KP_NUMBER_0  &trans           &trans           &mt_exit_AML LA(UP_ARROW) LC(PAGE_UP)  &kp LA(LS(K))  &mt LA(DOWN_ARROW) LC(PAGE_DOWN)      &trans  &trans                           &trans
+&kp KP_NUMBER_7               &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK            &kp KP_DIVIDE                                       &trans  &kp F10  &kp F7  &kp F8  &kp F9
+&kp KP_NUMBER_4               &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                &kp KP_MINUS   &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6
+&mt LEFT_SHIFT KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT                 &sum           &trans                       &trans  &trans  &kp F12  &kp F1  &kp F2  &kp F3
+&mt LEFT_CONTROL KP_NUMBER_0  &trans           &trans           &mt LA(LS(K)) LC(PAGE_UP)  &trans         &kp LC(PAGE_DOWN)            &trans  &trans                           &trans
             >;
         };
 
