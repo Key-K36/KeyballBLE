@@ -18,8 +18,8 @@
     combos {
         compatible = "zmk,combos";
 
-        backspace {
-            bindings = <&mt_exit_AML_on_hold DELETE BACKSPACE>;
+        delete {
+            bindings = <&mt_exit_AML_on_hold DELETE DELETE>;
             key-positions = <8 9>;
             layers = <0 4>;
         };
