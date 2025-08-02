@@ -215,6 +215,12 @@
             key-positions = <10 25>;
             layers = <2>;
         };
+
+        escape {
+            bindings = <&kp_exit_AML ESCAPE>;
+            key-positions = <2 11>;
+            layers = <0>;
+        };
     };
 
     macros {
