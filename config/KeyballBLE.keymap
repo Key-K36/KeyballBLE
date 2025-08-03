@@ -591,7 +591,7 @@
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp AMPERSAND  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp AMPERSAND  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
 &trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans         &trans     &trans                &trans                 &trans
 &trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans         &trans     &trans                &trans                 &trans
 &trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans                                                                 &trans
