@@ -224,13 +224,13 @@
 
         num_backspace {
             bindings = <&mt_exit_AML_on_hold BACKSPACE BACKSPACE>;
-            key-positions = <3 4>;
+            key-positions = <10 11>;
             layers = <2>;
         };
 
         num_delete {
             bindings = <&mt_exit_AML_on_hold DELETE DELETE>;
-            key-positions = <3 4>;
+            key-positions = <0 1>;
             layers = <2>;
         };
     };
