@@ -233,6 +233,12 @@
             key-positions = <0 1>;
             layers = <2>;
         };
+
+        num_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <25 26>;
+            layers = <2>;
+        };
     };
 
     macros {
