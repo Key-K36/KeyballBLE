@@ -26,7 +26,7 @@
 
         fanction_7 {
             bindings = <&kp_exit_AML F7>;
-            key-positions = <7 8>;
+            key-positions = <3 4>;
             layers = <0>;
         };
 
@@ -57,18 +57,6 @@
         colon {
             bindings = <&kp_exit_AML COLON>;
             key-positions = <31 32>;
-            layers = <0>;
-        };
-
-        end {
-            bindings = <&kp_exit_AML END>;
-            key-positions = <38 39>;
-            layers = <0>;
-        };
-
-        home {
-            bindings = <&kp_exit_AML HOME>;
-            key-positions = <37 38>;
             layers = <0>;
         };
 
@@ -188,7 +176,7 @@
 
         center_alignment {
             bindings = <&center_alignment>;
-            key-positions = <10 20>;
+            key-positions = <10 24>;
             layers = <2>;
         };
 
@@ -234,10 +222,34 @@
             layers = <2>;
         };
 
-        num_enter {
-            bindings = <&kp ENTER>;
+        num_equal {
+            bindings = <&kp EQUAL>;
             key-positions = <25 26>;
             layers = <2>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <7 6>;
+            layers = <0>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <6 5>;
+            layers = <0>;
         };
     };
 
@@ -639,10 +651,10 @@
 
         default_layer {
             bindings = <
-&mt_exit_AML_on_tap Q TAB               &kp_exit_AML W                  &kp_exit_AML E                  &kp_exit_AML R        &kp_exit_AML T                                                                        &kp_exit_AML Y                      &kp_exit_AML U  &kp_exit_AML I                     &lt_exit_AML 5 O                  &mt_exit_AML MINUS P
-&kp_exit_AML A                          &kp_exit_AML S                  &kp_exit_AML D                  &kp_exit_AML F        &kp_exit_AML G        &ht_kp_mkp_exit_AML ESCAPE LCLK      &kp_exit_AML UP_ARROW      &kp_exit_AML H                      &kp_exit_AML J  &kp_exit_AML K                     &kp_exit_AML L                    &mt_exit_AML ASTERISK ENTER
-&mt_exit_AML_on_tap LEFT_SHIFT Z        &kp_exit_AML X                  &kp_exit_AML C                  &kp_exit_AML V        &kp_exit_AML B        &kp_exit_AML LG(E)                   &kp_exit_AML DOWN_ARROW    &kp_exit_AML N                      &kp_exit_AML M  &mt_exit_AML LA(LEFT_ARROW) COMMA  &mt_exit_AML LA(RIGHT_ARROW) DOT  &mt_exit_AML_on_tap RIGHT_SHIFT SLASH
-&mt_exit_AML_on_tap LCTRL LEFT_CONTROL  &mt_exit_AML LEFT_WIN LEFT_GUI  &mt_exit_AML LEFT_ALT LEFT_ALT  &lt_exit_AML 6 EQUAL  &lt_exit_AML 2 SPACE  &lt_exit_AML 3 ENTER                 &lt_exit_AML 3 LEFT_ARROW  &lt_exit_AML_on_hold 2 RIGHT_ARROW                                                                                       &mt_exit_AML_on_hold DELETE BACKSPACE
+&mt_exit_AML_on_tap Q TAB               &kp_exit_AML W                  &kp_exit_AML E                  &kp_exit_AML R                    &kp_exit_AML T                                                                           &kp_exit_AML Y                &kp_exit_AML U  &kp_exit_AML I                     &lt_exit_AML 5 O                  &mt_exit_AML MINUS P
+&kp_exit_AML A                          &kp_exit_AML S                  &kp_exit_AML D                  &kp_exit_AML F                    &kp_exit_AML G        &ht_kp_mkp_exit_AML ESCAPE LCLK      &kp_exit_AML UP_ARROW         &kp_exit_AML H                &kp_exit_AML J  &kp_exit_AML K                     &kp_exit_AML L                    &mt_exit_AML ASTERISK ENTER
+&mt_exit_AML_on_tap LEFT_SHIFT Z        &kp_exit_AML X                  &kp_exit_AML C                  &kp_exit_AML V                    &kp_exit_AML B        &kp_exit_AML LG(E)                   &kp_exit_AML DOWN_ARROW       &kp_exit_AML N                &kp_exit_AML M  &mt_exit_AML LA(LEFT_ARROW) COMMA  &mt_exit_AML LA(RIGHT_ARROW) DOT  &mt_exit_AML_on_tap RIGHT_SHIFT SLASH
+&mt_exit_AML_on_tap LCTRL LEFT_CONTROL  &mt_exit_AML LEFT_WIN LEFT_GUI  &mt_exit_AML LEFT_ALT LEFT_ALT  &lt_exit_AML_on_hold 6 BACKSPACE  &lt_exit_AML 2 SPACE  &lt_exit_AML 3 ENTER                 &mt_exit_AML HOME LEFT_ARROW  &mt_exit_AML END RIGHT_ARROW                                                                                       &lt_exit_AML_on_hold 2 BACKSPACE
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
