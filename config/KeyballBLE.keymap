@@ -228,12 +228,6 @@
             layers = <2>;
         };
 
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
-
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <7 8>;
