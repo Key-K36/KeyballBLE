@@ -651,7 +651,7 @@
         SYMBOL {
             bindings = <
 &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp AMPERSAND  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&kp NUMBER_1     &kp N2             &kp N3    &kp N4      &kp N5       &trans      &trans  &kp N6         &kp N7     &kp N8                &kp N9                 &kp N0
+&trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans         &trans     &trans                &trans                 &trans
 &trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans         &trans     &trans                &trans                 &trans
 &trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans                                                                 &trans
             >;
@@ -668,10 +668,10 @@
 
         PASS {
             bindings = <
-&trans  &trans          &trans         &trans  &trans                            &trans  &trans  &trans  &trans  &trans
-&trans  &face_sumareji  &face_default  &trans  &face_google  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans         &trans  &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans         &trans  &trans        &trans      &trans  &trans                          &trans
+&kp LG(N1)  &kp LG(N2)      &kp LG(N3)     &kp LG(N4)  &kp LG(N5)                        &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LC(N0)
+&trans      &face_sumareji  &face_default  &trans      &face_google  &trans      &trans  &trans      &trans      &trans      &trans      &trans
+&trans      &trans          &trans         &trans      &trans        &trans      &trans  &trans      &trans      &trans      &trans      &trans
+&trans      &trans          &trans         &trans      &trans        &trans      &trans  &trans                                          &trans
             >;
         };
 
