@@ -495,22 +495,14 @@
         welcart_first: welcart_first {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp L &kp A &kp C &kp E &kp TAB>,
-                <&macro_wait_time 500>,
-                <&kp LS(B) &kp F &kp J &kp K &kp LS(V) &kp LS(G) &kp LS(W) &kp LS(O) &kp ENTER>;
-
+            bindings = <&kp L &kp A &kp C &kp E &kp TAB &kp LS(B) &kp F &kp J &kp K &kp LS(V) &kp LS(G) &kp LS(W) &kp LS(O) &kp ENTER>;
             label = "WELCART_FIRST";
         };
 
         welcart_second: welcart_second {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp K &kp I &kp S &kp A &kp B &kp U &kp R &kp O &kp UNDER &kp C &kp H &kp I &kp K &kp A &kp Z &kp A &kp W &kp A &kp UNDER &kp A &kp D &kp M &kp I &kp N &kp TAB>,
-                <&macro_wait_time 500>,
-                <&kp LS(P) &kp V &kp N4 &kp LS(C) &kp POUND &kp LS(S) &kp POUND &kp LS(S) &kp STAR &kp LS(Z) &kp LS(L) &kp LS(W) &kp A &kp N1 &kp LS(Z) &kp N5 &kp O &kp LS(F) &kp LS(K) &kp N4 &kp LS(T) &kp N8 &kp N0 &kp B &kp ENTER>;
-
+            bindings = <&kp K &kp I &kp S &kp A &kp B &kp U &kp R &kp O &kp UNDER &kp C &kp H &kp I &kp K &kp A &kp Z &kp A &kp W &kp A &kp UNDER &kp A &kp D &kp M &kp I &kp N &kp TAB &kp LS(P) &kp V &kp N4 &kp LS(C) &kp POUND &kp LS(S) &kp POUND &kp LS(S) &kp STAR &kp LS(Z) &kp LS(L) &kp LS(W) &kp A &kp N1 &kp LS(Z) &kp N5 &kp O &kp LS(F) &kp LS(K) &kp N4 &kp LS(T) &kp N8 &kp N0 &kp B &kp ENTER>;
             label = "WELCART_SECOND";
         };
 
