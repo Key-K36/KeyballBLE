@@ -553,6 +553,28 @@
             flavor = "balanced";
         };
 
+        ht_kp_shihft_click: ht_kp_shihft_click {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_kp_shihft_click";
+            bindings = <&kp>, <&shift_click>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_kp_control_click: ht_kp_control_click {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_kp_control_click";
+            bindings = <&kp>, <&control_click>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
         lt_exit_AML: lt_exit_AML {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_exit_AML";
