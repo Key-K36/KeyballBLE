@@ -216,8 +216,8 @@
             layers = <2>;
         };
 
-        backslash {
-            bindings = <&kp BACKSLASH>;
+        minus {
+            bindings = <&kp MINUS>;
             key-positions = <7 8>;
             layers = <0>;
         };
@@ -647,10 +647,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB                      &kp W                  &kp E                  &kp R                             &kp T                                                &kp Y              &kp U  &ht_kp_shihft_click I I   &lt 4 O                  &mt MINUS P
-&kp A                          &kp S                  &kp D                  &kp F                             &kp G        &kp ESCAPE              &kp UP_ARROW    &kp H              &kp J  &ht_kp_control_click K K  &kp L                    &mt_exit_AML_on_hold SLASH BACKSPACE
-&mt LEFT_SHIFT Z               &kp X                  &kp C                  &kp V                             &kp B        &kp LG(E)               &kp DOWN_ARROW  &kp N              &kp M  &mt LA(LEFT_ARROW) COMMA  &mt LA(RIGHT_ARROW) DOT  &mt RIGHT_SHIFT MINUS
-&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT  &lt_exit_AML_on_hold 6 BACKSPACE  &lt 2 SPACE  &lt 3 LS(CAPSLOCK)      &kp LEFT_ARROW  &lt 2 RIGHT_ARROW                                                            &lt 5 ENTER
+&mt Q TAB                      &kp W                  &kp E                  &kp R                             &kp T                                                  &kp Y              &kp U  &ht_kp_shihft_click I I   &kp O                    &lt 5 P
+&kp A                          &kp S                  &kp D                  &kp F                             &kp G        &kp ESCAPE              &kp UP_ARROW      &kp H              &kp J  &ht_kp_control_click K K  &kp L                    &mt_exit_AML_on_hold SLASH BACKSPACE
+&mt LEFT_SHIFT Z               &kp X                  &kp C                  &kp V                             &kp B        &kp LG(E)               &kp DOWN_ARROW    &kp N              &kp M  &mt LA(LEFT_ARROW) COMMA  &mt LA(RIGHT_ARROW) DOT  &mt RIGHT_SHIFT MINUS
+&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT  &lt_exit_AML_on_hold 6 BACKSPACE  &lt 2 SPACE  &lt 3 LS(CAPSLOCK)      &lt 2 LEFT_ARROW  &lt 2 RIGHT_ARROW                                                            &lt 4 ENTER
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -674,7 +674,7 @@
             >;
         };
 
-        PASS {
+        APP_CTRL_PASS {
             bindings = <
 &kp LG(N1)  &kp LG(N2)      &kp LG(N3)     &kp LG(N4)  &kp LG(N5)                        &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LC(N0)
 &trans      &face_sumareji  &face_default  &trans      &face_google  &trans      &trans  &trans      &trans      &trans      &trans      &trans
@@ -685,10 +685,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &shift_click    &mkp LCLK  &trans  &mkp RCLK
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &control_click  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                     &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &shift_click    &mkp LCLK  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &control_click  &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                        &trans
             >;
         };
 
