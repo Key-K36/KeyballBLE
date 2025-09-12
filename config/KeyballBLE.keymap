@@ -480,7 +480,7 @@
         ht_kp_shihft_click: ht_kp_shihft_click {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_kp_shihft_click";
-            bindings = <&shift_click>, <&kp>;
+            bindings = <&kp>, <&shift_click>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -491,7 +491,7 @@
         ht_kp_control_click: ht_kp_control_click {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_kp_control_click";
-            bindings = <&control_click>, <&kp>;
+            bindings = <&kp>, <&control_click>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
