@@ -189,6 +189,34 @@
             label = "KP_exit_AML";
         };
 
+        shift_click: shift_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&mkp LCLK>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "SHIFT_CLICK";
+        };
+
+        control_click: contolor_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&mkp LCLK>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "CONTOLOR_CLICK";
+        };
+
         mod_exit_AML: mod_exit_AML {
             compatible = "zmk,behavior-macro-one-param";
             wait-ms = <0>;
@@ -330,20 +358,6 @@
             label = "ROUND";
         };
 
-        shift_click: shift_crick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&mkp LCLK>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
-            label = "SHIFT_CRICK";
-        };
-
         paste_formulas_only: paste_formulas_only {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -377,20 +391,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp M &kp X &kp M>;
             label = "AUTO_CALCULATION_OFF";
-        };
-
-        control_click: contolor_click {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&mkp LCLK>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
-
-            label = "CONTOLOR_CLICK";
         };
 
         face_default: face_default {
