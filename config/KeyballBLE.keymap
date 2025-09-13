@@ -171,24 +171,6 @@
             label = "TO_LAYER_0";
         };
 
-        exit_AML: exit_AML {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <0>;
-            bindings = <&tog_off MOUSE>;
-            label = "exit_AML";
-        };
-
-        kp_exit_AML: kp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
-            label = "KP_exit_AML";
-        };
-
         shift_click: shift_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -215,6 +197,24 @@
                 <&kp LEFT_CONTROL>;
 
             label = "CONTOLOR_CLICK";
+        };
+
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off MOUSE>;
+            label = "exit_AML";
+        };
+
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+            label = "KP_exit_AML";
         };
 
         mod_exit_AML: mod_exit_AML {
