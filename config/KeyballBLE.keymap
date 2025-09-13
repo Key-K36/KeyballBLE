@@ -460,7 +460,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT_any_macro_kp";
             #binding-cells = <2>;
-            bindings = <&none>, <&none>; // ダミー。Keymap側で上書き
+
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
