@@ -456,10 +456,10 @@
             toggle-mode = "off";
         };
 
-        ht_kp_shihft_click: ht_kp_shihft_click {
+        ht_shift_control_click: ht_shift_control_click {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_kp_shihft_click";
-            bindings = <&kp>, <&shift_click>;
+            label = "HT_SHIFT_CONTROL_CLICK";
+            bindings = <&control_click>, <&shift_click>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -603,10 +603,10 @@
 
         MOUSE_NUM {
             bindings = <
-&kp KP_NUMBER_7                  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK          &kp KP_DIVIDE                                                                     &kp F2                   &shift_click    &mkp LCLK                    &lt 5 LA(LS(K))            &mkp RCLK
-&kp KP_NUMBER_4                  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt LC(KP_PLUS) KP_PLUS  &mt LC(KP_MINUS) KP_MINUS  &trans              &mt LC(LS(UP_ARROW)) UP_ARROW      &kp F4                   &control_click  &mt LC(LS(TAB)) LC(PAGE_UP)  &mt LC(TAB) LC(PAGE_DOWN)  &trans
-&mt LC(NUMBER_1) KP_NUMBER_1     &kp KP_NUMBER_2  &kp KP_NUMBER_3  &ht_kp_sum 0 EQUAL       &ht_kp_sumproduct 0 EQUAL  &kp KP_NUMLOCK      &mt LC(LS(DOWN_ARROW)) DOWN_ARROW  &kp F9                   &kp F12         &kp LA(LEFT_ARROW)           &kp LA(RIGHT_ARROW)        &trans
-&mt LC(KP_NUMBER_0) KP_NUMBER_0  &double_zero     &kp KP_DOT       &kp LS(SPACE)            &trans                     &kp LC(SPACE)       &mt LC(LS(LEFT_ARROW)) LEFT_ARROW  &mt LC(LS(RIGHT)) RIGHT                                                                          &trans
+&kp KP_NUMBER_7                  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK          &kp KP_DIVIDE                                                                     &kp F2                   &ht_shift_control_click 0 0  &mkp LCLK                    &lt 5 LA(LS(K))            &mkp RCLK
+&kp KP_NUMBER_4                  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt LC(KP_PLUS) KP_PLUS  &mt LC(KP_MINUS) KP_MINUS  &trans              &mt LC(LS(UP_ARROW)) UP_ARROW      &kp F4                   &mt LC(SPACE) LS(SPACE)      &mt LC(LS(TAB)) LC(PAGE_UP)  &mt LC(TAB) LC(PAGE_DOWN)  &trans
+&mt LC(NUMBER_1) KP_NUMBER_1     &kp KP_NUMBER_2  &kp KP_NUMBER_3  &ht_kp_sum 0 EQUAL       &ht_kp_sumproduct 0 EQUAL  &kp KP_NUMLOCK      &mt LC(LS(DOWN_ARROW)) DOWN_ARROW  &kp F9                   &kp F12                      &kp LA(LEFT_ARROW)           &kp LA(RIGHT_ARROW)        &trans
+&mt LC(KP_NUMBER_0) KP_NUMBER_0  &double_zero     &kp KP_DOT       &kp LS(SPACE)            &trans                     &kp LC(SPACE)       &mt LC(LS(LEFT_ARROW)) LEFT_ARROW  &mt LC(LS(RIGHT)) RIGHT                                                                                       &trans
             >;
         };
 
