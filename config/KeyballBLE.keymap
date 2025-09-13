@@ -171,7 +171,7 @@
             label = "TO_LAYER_0";
         };
 
-        shift_click: shift_click {
+        shift_click: shift_crick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -182,7 +182,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = "SHIFT_CLICK";
+            label = "SHIFT_CRICK";
         };
 
         control_click: contolor_click {
@@ -456,11 +456,12 @@
             toggle-mode = "off";
         };
 
-        ht_any_macro_kp: ht_any_macro_kp {
+        ht_kp_mkp_exit_AML: ht_kp_mkp_exit_AML {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_any_macro_kp";
-            #binding-cells = <2>;
+            label = "HT_kp_mkp_exit_AML";
+            bindings = <&kp_exit_AML>, <&mkp_exit_AML>;
 
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
@@ -627,7 +628,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &trans
             >;
         };
-
 
         SCROLL {
             bindings = <
