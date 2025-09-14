@@ -83,7 +83,6 @@
             key-positions = <10 25>;
             layers = <2>;
         };
-
     };
 
     macros {
@@ -558,8 +557,24 @@
             tapping-term-ms = <250>;
         };
 
-    };
+        tap_z: tap_z {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_Z";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT Z>, <&lt 1 Z>;
 
+            tapping-term-ms = <250>;
+        };
+
+        tap_slash: tap_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_SLASH";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT SLASH>, <&lt 1 SLASH>;
+
+            tapping-term-ms = <250>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -568,8 +583,8 @@
             bindings = <
 &mt Q TAB                      &ht_kp_windowh 0 W     &kp E                  &ht_kp_remove 0 R                 &kp T                                                                                      &kp Y                               &kp U  &kp I                &lt 5 O        &mt LEFT_BRACKET P
 &kp A                          &kp S                  &kp D                  &kp F                             &tap_g              &kp LG(LS(S))                         &kp ESCAPE                       &kp H                               &kp J  &ht_kp_ketsugou 0 K  &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
-&mt LEFT_SHIFT Z               &kp X                  &tap_c                 &tap_v                            &lt 6 B             &kp DELETE                            &kp LG(E)                        &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT  &lt_exit_AML_on_hold 3 BACKSPACE  &lt 2 LS(CAPSLOCK)  &lt_exit_AML_on_hold 1 LS(SPACE)      &mt_exit_AML_on_hold HOME SPACE  &mt_exit_AML_on_hold END BACKSPACE                                             &lt 2 ENTER
+&tap_z                         &kp X                  &tap_c                 &tap_v                            &lt 6 B             &kp DELETE                            &kp LG(E)                        &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &tap_slash
+&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT  &lt_exit_AML_on_hold 1 BACKSPACE  &lt 2 LS(CAPSLOCK)  &lt_exit_AML_on_hold 3 LS(SPACE)      &mt_exit_AML_on_hold HOME SPACE  &mt_exit_AML_on_hold END BACKSPACE                                             &lt 2 ENTER
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
