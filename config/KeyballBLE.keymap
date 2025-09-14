@@ -30,24 +30,6 @@
             layers = <0>;
         };
 
-        merging_cells {
-            bindings = <&merging_cells>;
-            key-positions = <24 19>;
-            layers = <2>;
-        };
-
-        transpose_and_paste {
-            bindings = <&transpose_and_paste>;
-            key-positions = <9 4>;
-            layers = <2>;
-        };
-
-        paste_memo_only {
-            bindings = <&paste_memo_only>;
-            key-positions = <9 30>;
-            layers = <2>;
-        };
-
         language {
             bindings = <&kp LS(CLCK)>;
             key-positions = <0 1>;
@@ -499,7 +481,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_NUM_R";
             #binding-cells = <0>;
-            bindings = <&ht_kp_remove 0 KP_ASTERISK>, <&round>;
+            bindings = <&kp KP_ASTERISK>, <&round>;
+
+            tapping-term-ms = <250>;
         };
 
         ht_kp_windowh: ht_kp_windowh {
@@ -518,6 +502,8 @@
             label = "TAP_NUM_V";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&vlookup>;
+
+            tapping-term-ms = <250>;
         };
 
         tap_num_b: tap_num_b {
@@ -525,64 +511,50 @@
             label = "TAP_NUM_B";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&sum>, <&sumproduct>;
+
+            tapping-term-ms = <250>;
         };
 
-        ht_kp_calculation_on: ht_kp_calculation_on {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_CALCULATION_ON";
-            bindings = <&auto_calculation>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        ht_kp_calculation_off: ht_kp_calculation_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_CALCULATION_OFF";
-            bindings = <&auto_calculation_off>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        tap_num_c: tap_num_c {
+        tap_c: tap_c {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_C";
+            label = "TAP_C";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&auto_calculation>, <&auto_calculation_off>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_g: tap_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_G";
+            #binding-cells = <0>;
+            bindings = <&mt LS(LA(RIGHT_ARROW)) G>, <&mt LS(LA(LEFT_ARROW)) G>;
+
+            tapping-term-ms = <250>;
+        };
+
+        ht_kp_ketsugou: ht_kp_ketsugou {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_KETSUGOU";
+            bindings = <&merging_cells>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        tap_v: tap_v {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_V";
             #binding-cells = <0>;
             bindings =
-                <&ht_kp_calculation_on 0 KP_NUMBER_3>,
-                <&ht_kp_calculation_off 0 KP_NUMBER_3>;
-        };
+                <&kp V>,
+                <&paste_formulas_only>,
+                <&transpose_and_paste>,
+                <&paste_memo_only>;
 
-        tap_num_g: tap_num_g {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_G";
-            #binding-cells = <0>;
-            bindings =
-                <&mt LS(LA(RIGHT_ARROW)) MINUS>,
-                <&mt LS(LA(LEFT_ARROW)) LC(MINUS)>;
-        };
-
-        ht_kp_formulas: ht_kp_formulas {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_FORMULAS";
-            bindings = <&paste_formulas_only>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        tap_num_f: tap_num_f {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_F";
-            #binding-cells = <0>;
-            bindings = <&ht_kp_formulas 0 KP_PLUS>, <&mt LS(LC(L)) LC(KP_PLUS)>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -591,9 +563,9 @@
 
         default_layer {
             bindings = <
-&mt Q TAB                      &kp W                  &kp E                  &kp R                             &kp T                                                                                      &kp Y                               &kp U  &kp I                &lt 5 O        &mt LEFT_BRACKET P
-&kp A                          &kp S                  &kp D                  &kp F                             &kp G               &kp LG(LS(S))                         &kp ESCAPE                       &kp H                               &kp J  &kp K                &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
-&mt LEFT_SHIFT Z               &kp X                  &kp C                  &kp V                             &lt 6 B             &kp DELETE                            &kp LG(E)                        &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &mt RIGHT_SHIFT SLASH
+&mt Q TAB                      &ht_kp_windowh 0 W     &kp E                  &ht_kp_remove 0 R                 &kp T                                                                                      &kp Y                               &kp U  &kp I                &lt 5 O        &mt LEFT_BRACKET P
+&kp A                          &kp S                  &kp D                  &kp F                             &tap_g              &kp LG(LS(S))                         &kp ESCAPE                       &kp H                               &kp J  &ht_kp_ketsugou 0 K  &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
+&mt LEFT_SHIFT Z               &kp X                  &tap_c                 &tap_v                            &lt 6 B             &kp DELETE                            &kp LG(E)                        &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &mt RIGHT_SHIFT SLASH
 &mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT  &lt_exit_AML_on_hold 3 BACKSPACE  &lt 2 LS(CAPSLOCK)  &lt_exit_AML_on_hold 1 LS(SPACE)      &mt_exit_AML_on_hold HOME SPACE  &mt_exit_AML_on_hold END BACKSPACE                                             &lt 2 ENTER
             >;
 
@@ -611,10 +583,10 @@
 
         MOUSE_NUM {
             bindings = <
-&kp KP_NUMBER_7                  &ht_kp_windowh 0 KP_NUMBER_8  &kp KP_NUMBER_9  &tap_num_r  &kp KP_DIVIDE                                                         &kp F2                   &ht_shift_control_click 0 0  &mkp LCLK                    &lt 5 LA(LS(K))            &mkp RCLK
-&kp KP_NUMBER_4                  &kp KP_NUMBER_5               &kp KP_NUMBER_6  &tap_num_f  &tap_num_g     &trans              &mt LC(LS(UP_ARROW)) UP_ARROW      &kp F4                   &mt LC(SPACE) LS(SPACE)      &mt LC(LS(TAB)) LC(PAGE_UP)  &mt LC(TAB) LC(PAGE_DOWN)  &kp LC(T)
-&mt LC(NUMBER_1) KP_NUMBER_1     &kp KP_NUMBER_2               &tap_num_c       &tap_num_v  &tap_num_b     &kp KP_NUMLOCK      &mt LC(LS(DOWN_ARROW)) DOWN_ARROW  &kp F9                   &kp F12                      &kp LA(LEFT_ARROW)           &kp LA(RIGHT_ARROW)        &mt LC(W) LG(D)
-&mt LC(KP_NUMBER_0) KP_NUMBER_0  &double_zero                  &kp KP_DOT       &trans      &trans         &trans              &mt LC(LS(LEFT_ARROW)) LEFT_ARROW  &mt LC(LS(RIGHT)) RIGHT                                                                                       &trans
+&kp KP_NUMBER_7                  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &tap_num_r               &kp KP_DIVIDE                                                                     &kp F2                   &ht_shift_control_click 0 0  &mkp LCLK                    &lt 5 LA(LS(K))            &mkp RCLK
+&kp KP_NUMBER_4                  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt LC(KP_PLUS) KP_PLUS  &mt LC(KP_MINUS) KP_MINUS  &trans              &mt LC(LS(UP_ARROW)) UP_ARROW      &kp F4                   &mt LC(SPACE) LS(SPACE)      &mt LC(LS(TAB)) LC(PAGE_UP)  &mt LC(TAB) LC(PAGE_DOWN)  &kp LC(T)
+&mt LC(NUMBER_1) KP_NUMBER_1     &kp KP_NUMBER_2  &kp KP_NUMBER_3  &tap_num_v               &tap_num_b                 &kp KP_NUMLOCK      &mt LC(LS(DOWN_ARROW)) DOWN_ARROW  &kp F9                   &kp F12                      &kp LA(LEFT_ARROW)           &kp LA(RIGHT_ARROW)        &mt LC(W) LG(D)
+&mt LC(KP_NUMBER_0) KP_NUMBER_0  &double_zero     &kp KP_DOT       &trans                   &trans                     &trans              &mt LC(LS(LEFT_ARROW)) LEFT_ARROW  &mt LC(LS(RIGHT)) RIGHT                                                                                       &trans
             >;
         };
 
