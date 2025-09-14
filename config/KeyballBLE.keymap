@@ -24,6 +24,18 @@
             layers = <0 4>;
         };
 
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
         fanction_7 {
             bindings = <&kp_exit_AML F7>;
             key-positions = <5 6>;
@@ -72,17 +84,6 @@
             layers = <2>;
         };
 
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <7 8>;
-            layers = <0>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
     };
 
     macros {
@@ -91,34 +92,6 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
-        };
-
-        shift_click: shift_crick {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&mkp LCLK>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
-            label = "SHIFT_CRICK";
-        };
-
-        control_click: contolor_click {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&mkp LCLK>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
-
-            label = "CONTOLOR_CLICK";
         };
 
         exit_AML: exit_AML {
@@ -187,6 +160,34 @@
                 <&sl_250 MOUSE>;
 
             label = "MKP_EXIT_AML";
+        };
+
+        shift_click: shift_crick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&mkp LCLK>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "SHIFT_CRICK";
+        };
+
+        control_click: contolor_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&mkp LCLK>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "CONTOLOR_CLICK";
         };
 
         remove_duplicates: choufuku {
@@ -378,39 +379,6 @@
             toggle-mode = "off";
         };
 
-        ht_shift_control_click: ht_shift_control_click {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_SHIFT_CONTROL_CLICK";
-            bindings = <&control_click>, <&shift_click>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        ht_kp_remove: ht_kp_remove {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_REMOVE";
-            bindings = <&remove_duplicates>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        ht_kp_mkp_exit_AML: ht_kp_mkp_exit_AML {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_kp_mkp_exit_AML";
-            bindings = <&kp_exit_AML>, <&mkp_exit_AML>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
         lt_exit_AML: lt_exit_AML {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_exit_AML";
@@ -477,13 +445,48 @@
             quick-tap-ms = <200>;
         };
 
-        tap_num_r: tap_num_r {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_R";
-            #binding-cells = <0>;
-            bindings = <&kp KP_ASTERISK>, <&round>;
+        ht_kp_mkp_exit_AML: ht_kp_mkp_exit_AML {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_kp_mkp_exit_AML";
+            bindings = <&kp_exit_AML>, <&mkp_exit_AML>;
 
-            tapping-term-ms = <250>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_shift_control_click: ht_shift_control_click {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_SHIFT_CONTROL_CLICK";
+            bindings = <&control_click>, <&shift_click>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_kp_ketsugou: ht_kp_ketsugou {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_KETSUGOU";
+            bindings = <&merging_cells>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_kp_remove: ht_kp_remove {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_REMOVE";
+            bindings = <&remove_duplicates>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
         };
 
         ht_kp_windowh: ht_kp_windowh {
@@ -495,15 +498,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
-        };
-
-        tap_num_v: tap_num_v {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_V";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&vlookup>;
-
-            tapping-term-ms = <250>;
         };
 
         tap_num_b: tap_num_b {
@@ -533,15 +527,13 @@
             tapping-term-ms = <250>;
         };
 
-        ht_kp_ketsugou: ht_kp_ketsugou {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_KETSUGOU";
-            bindings = <&merging_cells>, <&kp>;
+        tap_num_r: tap_num_r {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_R";
+            #binding-cells = <0>;
+            bindings = <&kp KP_ASTERISK>, <&round>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
+            tapping-term-ms = <250>;
         };
 
         tap_v: tap_v {
@@ -556,7 +548,18 @@
 
             tapping-term-ms = <250>;
         };
+
+        tap_num_v: tap_num_v {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_V";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&vlookup>;
+
+            tapping-term-ms = <250>;
+        };
+
     };
+
 
     keymap {
         compatible = "zmk,keymap";
