@@ -505,7 +505,7 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&sum>, <&sumproduct>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         tap_c: tap_c {
@@ -514,7 +514,7 @@
             #binding-cells = <0>;
             bindings = <&kp C>, <&auto_calculation>, <&auto_calculation_off>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         tap_g: tap_g {
@@ -523,7 +523,7 @@
             #binding-cells = <0>;
             bindings = <&mt LS(LA(RIGHT_ARROW)) G>, <&mt LS(LA(LEFT_ARROW)) G>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         tap_num_r: tap_num_r {
@@ -532,7 +532,7 @@
             #binding-cells = <0>;
             bindings = <&kp KP_ASTERISK>, <&round>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         tap_v: tap_v {
@@ -545,7 +545,7 @@
                 <&transpose_and_paste>,
                 <&paste_memo_only>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         tap_num_v: tap_num_v {
@@ -554,7 +554,7 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&vlookup>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         tap_z: tap_z {
@@ -563,7 +563,7 @@
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT Z>, <&lt 1 Z>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         tap_slash: tap_slash {
@@ -572,7 +572,7 @@
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT SLASH>, <&lt 1 SLASH>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
     };
 
