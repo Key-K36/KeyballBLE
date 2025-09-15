@@ -511,6 +511,8 @@
             label = "TAP_C";
             #binding-cells = <0>;
             bindings = <&kp C>, <&auto_calculation>, <&auto_calculation_off>;
+
+            tapping-term-ms = <100>;
         };
 
         tap_g: tap_g {
@@ -566,8 +568,8 @@
         default_layer {
             bindings = <
 &mt Q TAB                      &ht_kp_windowh 0 W     &kp E                  &ht_kp_remove 0 R                 &kp T                                                                                      &kp Y                               &kp U  &kp I                &lt 5 O        &mt LEFT_BRACKET P
-&kp A                          &kp S                  &kp D                  &kp F                             &tap_g              &kp LG(LS(S))                         &kp ESCAPE                       &kp H                               &kp J  &ht_kp_ketsugou 0 K  &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
-&tap_z                         &kp X                  &tap_c                 &tap_v                            &lt 6 B             &kp DELETE                            &kp LG(E)                        &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &tap_slash
+&kp A                          &kp S                  &kp D                  &kp F                             &kp G               &kp LG(LS(S))                         &kp ESCAPE                       &kp H                               &kp J  &ht_kp_ketsugou 0 K  &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
+&kp Z                          &kp X                  &tap_c                 &kp V                             &lt 6 B             &kp DELETE                            &kp LG(E)                        &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &tap_slash
 &mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT  &lt_exit_AML_on_hold 1 BACKSPACE  &lt 2 LS(CAPSLOCK)  &lt_exit_AML_on_hold 3 LS(SPACE)      &mt_exit_AML_on_hold HOME SPACE  &mt_exit_AML_on_hold END BACKSPACE                                             &lt 2 ENTER
             >;
 
