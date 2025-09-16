@@ -568,8 +568,6 @@
             label = "TAP_NUM_B";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&sum>, <&sumproduct>;
-
-            tapping-term-ms = <250>;
         };
 
         tap_num_g: tap_num_g {
@@ -579,8 +577,6 @@
             bindings =
                 <&mt LC(KP_MINUS) KP_MINUS>,
                 <&mt LS(LA(LEFT_ARROW)) KP_MINUS>;
-
-            tapping-term-ms = <250>;
         };
 
         tap_num_r: tap_num_r {
@@ -588,8 +584,6 @@
             label = "TAP_NUM_R";
             #binding-cells = <0>;
             bindings = <&kp KP_ASTERISK>, <&round>;
-
-            tapping-term-ms = <250>;
         };
 
         tap_num_v: tap_num_v {
@@ -597,8 +591,6 @@
             label = "TAP_NUM_V";
             #binding-cells = <0>;
             bindings = <&mt LC(LS(V)) EQUAL>, <&ht_vlookup_formulas 0 0>;
-
-            tapping-term-ms = <250>;
         };
 
         tap_space: tap_space {
@@ -606,8 +598,6 @@
             label = "TAP_SPACE";
             #binding-cells = <0>;
             bindings = <&lt 2 SPACE>, <&lt 1 LS(SPACE)>, <&kp LC(SPACE)>;
-
-            tapping-term-ms = <250>;
         };
 
         tap_left: tap_left {
@@ -615,8 +605,6 @@
             label = "TAP_LEFT";
             #binding-cells = <0>;
             bindings = <&ht_kp_left_align 0 LEFT_ARROW>, <&kp HOME>;
-
-            tapping-term-ms = <250>;
         };
 
         tap_right: tap_right {
@@ -624,8 +612,6 @@
             label = "TAP_RIGHT";
             #binding-cells = <0>;
             bindings = <&ht_kp_right_align 0 RIGHT_ARROW>, <&kp END>;
-
-            tapping-term-ms = <250>;
         };
     };
 
