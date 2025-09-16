@@ -464,71 +464,6 @@
             flavor = "balanced";
         };
 
-        tap_num_b: tap_num_b {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_B";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&sum>, <&sumproduct>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_num_g: tap_num_g {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_G";
-            #binding-cells = <0>;
-            bindings =
-                <&mt LC(KP_MINUS) KP_MINUS>,
-                <&mt LS(LA(LEFT_ARROW)) KP_MINUS>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_num_r: tap_num_r {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_R";
-            #binding-cells = <0>;
-            bindings = <&kp KP_ASTERISK>, <&round>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_num_f: tap_num_f {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_F";
-            #binding-cells = <0>;
-            bindings = <&mt LC(KP_PLUS) KP_PLUS>, <&ht_kp_formulas 0 KP_PLUS>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_num_v: tap_num_v {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_V";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&vlookup>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_lang: tap_lang {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_LANG";
-            #binding-cells = <0>;
-            bindings = <&lt 2 LS(CAPSLOCK)>, <&lt 1 LS(CAPSLOCK)>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_space: tap_space {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_SPACE";
-            #binding-cells = <0>;
-            bindings = <&mt LS(SPACE) SPACE>, <&mt LC(SPACE) SPACE>;
-
-            tapping-term-ms = <250>;
-        };
-
         ht_kp_calculation: ht_kp_calculation {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_CALCULATION";
@@ -626,6 +561,71 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "balanced";
+        };
+
+        tap_num_b: tap_num_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_B";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&sum>, <&sumproduct>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_num_g: tap_num_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_G";
+            #binding-cells = <0>;
+            bindings =
+                <&mt LC(KP_MINUS) KP_MINUS>,
+                <&mt LS(LA(LEFT_ARROW)) KP_MINUS>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_num_r: tap_num_r {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_R";
+            #binding-cells = <0>;
+            bindings = <&kp KP_ASTERISK>, <&round>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_num_f: tap_num_f {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_F";
+            #binding-cells = <0>;
+            bindings = <&mt LC(KP_PLUS) KP_PLUS>, <&ht_kp_formulas 0 KP_PLUS>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_num_v: tap_num_v {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_NUM_V";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&vlookup>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_lang: tap_lang {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_LANG";
+            #binding-cells = <0>;
+            bindings = <&lt 2 LS(CAPSLOCK)>, <&lt 1 LS(CAPSLOCK)>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_space: tap_space {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_SPACE";
+            #binding-cells = <0>;
+            bindings = <&mt LS(SPACE) SPACE>, <&mt LC(SPACE) SPACE>;
+
+            tapping-term-ms = <250>;
         };
 
         tap_left: tap_left {
