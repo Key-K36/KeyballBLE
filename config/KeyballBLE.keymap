@@ -486,17 +486,6 @@
             flavor = "balanced";
         };
 
-        ht_kp_formulas: ht_kp_formulas {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_FORMULAS";
-            bindings = <&paste_formulas_only>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
         ht_kp_transpose: ht_kp_transpose {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_TRANSPOSE";
@@ -592,20 +581,11 @@
             tapping-term-ms = <250>;
         };
 
-        tap_num_f: tap_num_f {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_NUM_F";
-            #binding-cells = <0>;
-            bindings = <&mt LC(KP_PLUS) KP_PLUS>, <&ht_kp_formulas 0 KP_PLUS>;
-
-            tapping-term-ms = <250>;
-        };
-
         tap_num_v: tap_num_v {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_NUM_V";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&vlookup>;
+            bindings = <&mt LC(LS(V)) EQUAL>, <&ht_vlookup_formulas 0 0>;
 
             tapping-term-ms = <250>;
         };
@@ -645,6 +625,17 @@
 
             tapping-term-ms = <250>;
         };
+
+        ht_vlookup_formulas: ht_vlookup_formulas {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_VLOOKUP_FORMULAS";
+            bindings = <&paste_formulas_only>, <&vlookup>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -654,7 +645,7 @@
             bindings = <
 &mt Q TAB                      &ht_kp_windowh 0 W     &kp E                   &ht_kp_remove 0 R                 &kp T                                                                           &kp Y       &kp U  &kp I                &lt 5 O        &mt LEFT_BRACKET P
 &kp A                          &kp S                  &kp D                   &kp F                             &mt LS(LA(RIGHT_ARROW)) G  &kp LG(LS(S))      &ht_kp_top_align 0 UP_ARROW       &kp H       &kp J  &ht_kp_ketsugou 0 K  &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
-&mt LEFT_SHIFT Z               &kp X                  &ht_kp_calculation 0 C  &kp V                             &lt 6 B                    &kp DELETE         &ht_kp_bottom_align 0 DOWN_ARROW  &kp N       &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &mt LEFT_SHIFT SLASH
+&mt LEFT_SHIFT Z               &kp X                  &ht_kp_calculation 0 C  &mt LC(V) V                       &lt 6 B                    &kp DELETE         &ht_kp_bottom_align 0 DOWN_ARROW  &kp N       &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &mt LEFT_SHIFT SLASH
 &mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT   &lt_exit_AML_on_hold 3 BACKSPACE  &tap_lang                  &tap_space         &tap_left                         &tap_right                                             &lt 2 ENTER
             >;
 
@@ -663,19 +654,19 @@
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp AMPERSAND  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans         &trans     &trans                &trans                 &trans
-&trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans         &trans     &trans                &trans                 &trans
-&trans           &trans             &trans    &trans      &trans       &trans      &trans  &trans                                                                 &trans
+&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH  &kp DOLLAR  &kp PERCENT                                                &kp AMPERSAND                             &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&trans           &trans             &trans    &trans      &trans       &trans      &trans                            &trans                                    &trans     &trans                &trans                 &kp LS(MINUS)
+&trans           &trans             &trans    &trans      &trans       &trans      &trans                            &trans                                    &trans     &trans                &trans                 &kp LS(SLASH)
+&trans           &trans             &trans    &trans      &trans       &trans      &mt_exit_AML_on_hold SPACE SPACE  &mt_exit_AML_on_hold BACKSPACE BACKSPACE                                                          &trans
             >;
         };
 
         MOUSE_NUM {
             bindings = <
-&kp KP_NUMBER_7                  &kp KP_NUMBER_8  &kp KP_NUMBER_9                       &tap_num_r  &ht_kp_transpose 0 KP_SLASH                                                              &kp F2                                        &shift_click       &mkp LCLK           &lt 5 LA(LS(K))      &mkp RCLK
-&kp KP_NUMBER_4                  &kp KP_NUMBER_5  &kp KP_NUMBER_6                       &tap_num_f  &tap_num_g                   &trans              &kp ESCAPE                              &kp F4                                        &control_click     &kp LC(LS(TAB))     &kp LC(TAB)          &kp LC(T)
-&mt LC(NUMBER_1) KP_NUMBER_1     &kp KP_NUMBER_2  &ht_kp_calculation_off 0 KP_NUMBER_3  &tap_num_v  &tap_num_b                   &kp KP_NUMLOCK      &kp LG(E)                               &kp F9                                        &ht_kp_memo 0 F12  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &mt LC(W) LG(D)
-&mt LC(KP_NUMBER_0) KP_NUMBER_0  &double_zero     &kp KP_DOT                            &trans      &trans                       &trans              &mt_exit_AML_on_hold LC(PAGE_UP) SPACE  &mt_exit_AML_on_hold LC(PAGE_DOWN) BACKSPACE                                                              &trans
+&kp KP_NUMBER_7                  &kp KP_NUMBER_8  &kp KP_NUMBER_9                       &tap_num_r               &ht_kp_transpose 0 KP_SLASH                                                              &kp F2                                        &shift_click       &mkp LCLK           &lt 5 LA(LS(K))      &mkp RCLK
+&kp KP_NUMBER_4                  &kp KP_NUMBER_5  &kp KP_NUMBER_6                       &mt LC(KP_PLUS) KP_PLUS  &tap_num_g                   &trans              &kp ESCAPE                              &kp F4                                        &control_click     &kp LC(LS(TAB))     &kp LC(TAB)          &kp LC(T)
+&mt LC(NUMBER_1) KP_NUMBER_1     &kp KP_NUMBER_2  &ht_kp_calculation_off 0 KP_NUMBER_3  &tap_num_v               &tap_num_b                   &kp KP_NUMLOCK      &kp LG(E)                               &kp F9                                        &ht_kp_memo 0 F12  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &mt LC(W) LG(D)
+&mt LC(KP_NUMBER_0) KP_NUMBER_0  &double_zero     &kp KP_DOT                            &trans                   &trans                       &trans              &mt_exit_AML_on_hold LC(PAGE_UP) SPACE  &mt_exit_AML_on_hold LC(PAGE_DOWN) BACKSPACE                                                              &trans
             >;
         };
 
