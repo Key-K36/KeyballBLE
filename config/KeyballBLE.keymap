@@ -552,6 +552,17 @@
             flavor = "balanced";
         };
 
+        ht_vlookup_formulas: ht_vlookup_formulas {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_VLOOKUP_FORMULAS";
+            bindings = <&paste_formulas_only>, <&vlookup>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
         tap_num_b: tap_num_b {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_NUM_B";
@@ -624,17 +635,6 @@
             bindings = <&ht_kp_right_align 0 RIGHT_ARROW>, <&kp END>;
 
             tapping-term-ms = <250>;
-        };
-
-        ht_vlookup_formulas: ht_vlookup_formulas {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_VLOOKUP_FORMULAS";
-            bindings = <&paste_formulas_only>, <&vlookup>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
         };
     };
 
