@@ -21,67 +21,43 @@
         delete {
             bindings = <&mt_exit_AML_on_hold BACKSPACE DELETE>;
             key-positions = <8 9>;
-            layers = <0 4>;
+            layers = <0 2 1>;
         };
 
         tilde {
             bindings = <&kp TILDE>;
             key-positions = <7 8>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <6 7>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         fanction_7 {
             bindings = <&kp_exit_AML F7>;
             key-positions = <5 6>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         language {
             bindings = <&kp LS(CLCK)>;
             key-positions = <0 1>;
-            layers = <0 4>;
-        };
-
-        right_alignment {
-            bindings = <&right_alignment>;
-            key-positions = <3 10>;
-            layers = <2>;
-        };
-
-        left_alignment {
-            bindings = <&left_alignment>;
-            key-positions = <10 20>;
-            layers = <2>;
+            layers = <0 2 1>;
         };
 
         center_alignment {
             bindings = <&center_alignment>;
-            key-positions = <10 24>;
-            layers = <2>;
-        };
-
-        top_alignment {
-            bindings = <&top_alignment>;
-            key-positions = <10 4>;
-            layers = <2>;
-        };
-
-        bottom_alignment {
-            bindings = <&bottom_alignment>;
-            key-positions = <10 26>;
-            layers = <2>;
+            key-positions = <40 41>;
+            layers = <0>;
         };
 
         vertical_alignment {
             bindings = <&vertical_center_alignment>;
-            key-positions = <10 25>;
-            layers = <2>;
+            key-positions = <16 28>;
+            layers = <0>;
         };
     };
 
@@ -607,6 +583,68 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
+
+        ht_kp_left_align: ht_kp_left_align {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_LEFT_ALIGN";
+            bindings = <&left_alignment>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_kp_right_align: ht_kp_right_align {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_RIGHT_ALIGN";
+            bindings = <&right_alignment>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_kp_top_align: ht_kp_top_align {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_TOP_ALIGN";
+            bindings = <&top_alignment>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_kp_bottom_align: ht_kp_bottom_align {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_KP_BOTTOM_ALIGN";
+            bindings = <&bottom_alignment>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        tap_left: tap_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_LEFT";
+            #binding-cells = <0>;
+            bindings = <&ht_kp_left_align 0 LEFT_ARROW>, <&kp HOME>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_right: tap_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&ht_kp_right_align 0 RIGHT_ARROW>, <&kp END>;
+
+            tapping-term-ms = <250>;
+        };
     };
 
     keymap {
@@ -614,10 +652,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB                      &ht_kp_windowh 0 W     &kp E                   &ht_kp_remove 0 R                 &kp T                                                                                     &kp Y                                 &kp U  &kp I                &lt 5 O        &mt LEFT_BRACKET P
-&kp A                          &kp S                  &kp D                   &kp F                             &mt LS(LA(RIGHT_ARROW)) G  &kp LG(LS(S))      &mt_exit_AML_on_hold UP_ARROW UP_ARROW      &kp H                                 &kp J  &ht_kp_ketsugou 0 K  &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
-&mt LEFT_SHIFT Z               &kp X                  &ht_kp_calculation 0 C  &kp V                             &lt 6 B                    &kp DELETE         &mt_exit_AML_on_hold DOWN_ARROW DOWN_ARROW  &kp N                                 &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &mt LEFT_SHIFT SLASH
-&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT   &lt_exit_AML_on_hold 3 BACKSPACE  &tap_lang                  &tap_space         &mt_exit_AML_on_hold HOME LEFT_ARROW        &mt_exit_AML_on_hold END RIGHT_ARROW                                             &lt 2 ENTER
+&mt Q TAB                      &ht_kp_windowh 0 W     &kp E                   &ht_kp_remove 0 R                 &kp T                                                                           &kp Y       &kp U  &kp I                &lt 5 O        &mt LEFT_BRACKET P
+&kp A                          &kp S                  &kp D                   &kp F                             &mt LS(LA(RIGHT_ARROW)) G  &kp LG(LS(S))      &ht_kp_top_align 0 UP_ARROW       &kp H       &kp J  &ht_kp_ketsugou 0 K  &mt AT_SIGN L  &mt RIGHT_BRACKET MINUS
+&mt LEFT_SHIFT Z               &kp X                  &ht_kp_calculation 0 C  &kp V                             &lt 6 B                    &kp DELETE         &ht_kp_bottom_align 0 DOWN_ARROW  &kp N       &kp M  &mt SEMICOLON COMMA  &mt COLON DOT  &mt LEFT_SHIFT SLASH
+&mt LEFT_CONTROL LEFT_CONTROL  &mt LEFT_GUI LEFT_GUI  &mt LEFT_ALT LEFT_ALT   &lt_exit_AML_on_hold 3 BACKSPACE  &tap_lang                  &tap_space         &tap_left                         &tap_right                                             &lt 2 ENTER
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
