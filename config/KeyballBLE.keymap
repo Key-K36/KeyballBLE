@@ -51,13 +51,13 @@
         center_alignment {
             bindings = <&center_alignment>;
             key-positions = <40 41>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         vertical_alignment {
             bindings = <&vertical_center_alignment>;
             key-positions = <16 28>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         num {
