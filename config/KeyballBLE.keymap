@@ -366,17 +366,6 @@
             quick-tap-ms = <200>;
         };
 
-        ht_shiftclick_ketsugou: ht_shiftclick_ketsugou {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_SHIFTCLICK_KETSUGOU";
-            bindings = <&merging_cells>, <&shift_click>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
         ht_kp_remove: ht_kp_remove {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_REMOVE";
@@ -392,17 +381,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_WINDOWH";
             bindings = <&window_hold>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
-        ht_calculation_on_off: ht_calculation_on_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_CALCULATION_ON_OFF";
-            bindings = <&auto_calculation_off>, <&auto_calculation>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -469,6 +447,28 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_BOTTOM_ALIGN";
             bindings = <&bottom_alignment>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_calculation_on_off: ht_calculation_on_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CALCULATION_ON_OFF";
+            bindings = <&auto_calculation_off>, <&auto_calculation>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_shiftclick_ketsugou: ht_shiftclick_ketsugou {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_SHIFTCLICK_KETSUGOU";
+            bindings = <&merging_cells>, <&shift_click>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
