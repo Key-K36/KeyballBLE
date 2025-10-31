@@ -377,6 +377,34 @@
             bindings = <&kp LC(SPACE) &kp LC(KP_MINUS)>;
             label = "COLUM_MINUS";
         };
+
+        row_copy: row_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SPACE) &kp LC(C)>;
+            label = "ROW_COPY";
+        };
+
+        row_cut: row_cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SPACE) &kp LC(X)>;
+            label = "ROW_CUT";
+        };
+
+        colum_copy: colum_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp LC(C)>;
+            label = "COLUM_COPY";
+        };
+
+        colum_cut: colum_cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp LC(C)>;
+            label = "COLUM_CUT";
+        };
     };
 
     behaviors {
@@ -504,7 +532,7 @@
         ht_shiftclick_contsiftclick: ht_shiftclick_contsiftclick {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_SHIFTCLICK_CONTSIFTCLICK";
-            bindings = <&control_shift_click>, <&shift_click>;
+            bindings = <&control_click>, <&shift_click>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -550,6 +578,37 @@
 
             tapping-term-ms = <250>;
         };
+
+        ht_row_colum_copy: ht_row_colum_copy {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_ROW_COLUM_COPY";
+            bindings = <&colum_copy>, <&row_copy>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ht_row_colum_cut: ht_row_colum_cut {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_ROW_COLUM_CUT";
+            bindings = <&colum_cut>, <&row_cut>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        tap_row_colum: tap_row_colum {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_ROW_COLUM";
+            #binding-cells = <0>;
+            bindings = <&ht_row_colum_copy 0 0>, <&ht_row_colum_cut 0 0>;
+
+            tapping-term-ms = <250>;
+        };
     };
 
     keymap {
@@ -577,9 +636,9 @@
 
         MOUSE_NUM_SYMBOL {
             bindings = <
-&tap_equal                  &mt GRAVE KP_NUMBER_7            &mt LEFT_PARENTHESIS KP_NUMBER_8  &mt RIGHT_PARENTHESIS KP_NUMBER_9  &mt LC(KP_MINUS) KP_MINUS                                                                  &trans                               &control_click              &mkp LCLK                           &trans                                &mkp RCLK
+&tap_equal                  &mt GRAVE KP_NUMBER_7            &mt LEFT_PARENTHESIS KP_NUMBER_8  &mt RIGHT_PARENTHESIS KP_NUMBER_9  &mt LC(KP_MINUS) KP_MINUS                                                                  &trans                               &control_shift_click        &mkp LCLK                           &trans                                &mkp RCLK
 &mt LC(LS(L)) LC(NUMBER_1)  &mt DOLLAR KP_NUMBER_4           &mt PERCENT KP_NUMBER_5           &mt AMPERSAND KP_NUMBER_6          &mt LC(KP_PLUS) KP_PLUS    &trans                         &mt LA(LS(RIGHT)) LC(LS(TAB))    &window_hold                         &ht_calculation_on_off 0 0  &ht_shiftclick_contsiftclick 0 0    &ht_kp_top_align 0 LG(UP_ARROW)       &mt LA(F4) LC(W)
-&tap_row                    &mt EXCLAMATION KP_NUMBER_1      &mt DOUBLE_QUOTES KP_NUMBER_2     &mt POUND KP_NUMBER_3              &mt KP_COMMA KP_DOT        &tap_paste                     &mt LA(LS(LEFT)) LC(TAB)         &trans                               &merging_cells              &ht_kp_left_align 0 LG(LEFT_ARROW)  &ht_kp_bottom_align 0 LG(DOWN_ARROW)  &ht_kp_right_align 0 LG(RIGHT_ARROW)
+&tap_row                    &mt EXCLAMATION KP_NUMBER_1      &mt DOUBLE_QUOTES KP_NUMBER_2     &mt POUND KP_NUMBER_3              &mt KP_COMMA KP_DOT        &tap_paste                     &mt LA(LS(LEFT)) LC(TAB)         &tap_row_colum                       &merging_cells              &ht_kp_left_align 0 LG(LEFT_ARROW)  &ht_kp_bottom_align 0 LG(DOWN_ARROW)  &ht_kp_right_align 0 LG(RIGHT_ARROW)
 &tap_colum                  &mt LC(KP_NUMBER_0) KP_NUMBER_0  &double_zero                      &kp LC(LS(V))                      &trans                     &ht_kp_duplicates 0 LC(C)      &mt LC(LS(PAGE_UP)) LC(PAGE_UP)  &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)                                                                                                        &trans
             >;
         };
