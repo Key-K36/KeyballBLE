@@ -24,6 +24,24 @@
             layers = <0 2 1>;
         };
 
+        language {
+            bindings = <&mt ESCAPE LS(CAPSLOCK)>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        f4 {
+            bindings = <&kp F4>;
+            key-positions = <3 4>;
+            layers = <0>;
+        };
+
         f12_backslash {
             bindings = <&mt BACKSLASH F12>;
             key-positions = <7 8>;
@@ -36,15 +54,21 @@
             layers = <0>;
         };
 
-        fanction_7 {
+        f7 {
             bindings = <&kp F7>;
             key-positions = <5 6>;
             layers = <0>;
         };
 
-        language {
-            bindings = <&mt ESCAPE LS(CAPSLOCK)>;
-            key-positions = <0 1>;
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <19 20>;
+            layers = <0>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <20 21>;
             layers = <0>;
         };
 
@@ -60,30 +84,6 @@
             layers = <0>;
         };
 
-        num_slash {
-            bindings = <&kp SLASH>;
-            key-positions = <1 0>;
-            layers = <2>;
-        };
-
-        num_asterisk {
-            bindings = <&kp ASTERISK>;
-            key-positions = <2 1>;
-            layers = <2>;
-        };
-
-        f4 {
-            bindings = <&kp F4>;
-            key-positions = <3 4>;
-            layers = <0>;
-        };
-
-        f2 {
-            bindings = <&kp F2>;
-            key-positions = <1 2>;
-            layers = <0>;
-        };
-
         vlookup {
             bindings = <&vlookup>;
             key-positions = <25 20>;
@@ -96,16 +96,16 @@
             layers = <0>;
         };
 
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <19 20>;
-            layers = <0>;
+        num_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <1 0>;
+            layers = <2>;
         };
 
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <20 21>;
-            layers = <0>;
+        num_asterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <2 1>;
+            layers = <2>;
         };
 
         num_remove {
@@ -201,6 +201,20 @@
                 <&kp LEFT_CONTROL &mkp LCLK>;
 
             label = "CONTOLOR_CLICK";
+        };
+
+        control_shift_click: control_shift_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&mkp LCLK>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
+
+            label = "CONTROL_SHIFT_CLICK";
         };
 
         remove_duplicates: choufuku {
@@ -334,20 +348,6 @@
             #binding-cells = <0>;
             bindings = <&kp KP_NUMBER_0 &kp KP_NUMBER_0>;
             label = "DOUBLE_ZERO";
-        };
-
-        control_shift_click: control_shift_click {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&mkp LCLK>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_SHIFT>;
-
-            label = "CONTROL_SHIFT_CLICK";
         };
 
         row_plus: row_plus {
@@ -507,17 +507,6 @@
             flavor = "balanced";
         };
 
-        ht_calculation_on_off: ht_calculation_on_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_CALCULATION_ON_OFF";
-            bindings = <&auto_calculation>, <&auto_calculation_off>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-        };
-
         ht_shiftclick_contsiftclick: ht_shiftclick_contsiftclick {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_SHIFTCLICK_CONTSIFTCLICK";
@@ -529,43 +518,15 @@
             flavor = "balanced";
         };
 
-        tap_paste: tap_paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_PASTE";
-            #binding-cells = <0>;
-            bindings =
-                <&paste_formulas_only>,
-                <&transpose_and_paste>,
-                <&paste_memo_only>;
+        ht_calculation_on_off: ht_calculation_on_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CALCULATION_ON_OFF";
+            bindings = <&auto_calculation>, <&auto_calculation_off>;
 
-            tapping-term-ms = <250>;
-        };
-
-        tap_equal: tap_equal {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_EQUAL";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&sum>, <&sumproduct>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_row: tap_row {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_ROW";
-            #binding-cells = <0>;
-            bindings = <&ht_row_copy_cut 0 0>, <&ht_row_plus_minus 0 0>;
-
-            tapping-term-ms = <250>;
-        };
-
-        tap_colum: tap_colum {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_COLUM";
-            #binding-cells = <0>;
-            bindings = <&ht_colum_copy_cut 0 0>, <&ht_colum_plus_minus 0 0>;
-
-            tapping-term-ms = <250>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
         };
 
         ht_row_copy_cut: ht_row_copy_cut {
@@ -611,6 +572,46 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
+
+        tap_row: tap_row {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_ROW";
+            #binding-cells = <0>;
+            bindings = <&ht_row_copy_cut 0 0>, <&ht_row_plus_minus 0 0>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_colum: tap_colum {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_COLUM";
+            #binding-cells = <0>;
+            bindings = <&ht_colum_copy_cut 0 0>, <&ht_colum_plus_minus 0 0>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_paste: tap_paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_PASTE";
+            #binding-cells = <0>;
+            bindings =
+                <&paste_formulas_only>,
+                <&transpose_and_paste>,
+                <&paste_memo_only>;
+
+            tapping-term-ms = <250>;
+        };
+
+        tap_equal: tap_equal {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_EQUAL";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&sum>, <&sumproduct>;
+
+            tapping-term-ms = <250>;
+        };
+
     };
 
     keymap {
