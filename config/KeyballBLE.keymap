@@ -42,9 +42,9 @@
             layers = <0>;
         };
 
-        f12 {
-            bindings = <&kp F12>;
-            key-positions = <7 8>;
+        f7 {
+            bindings = <&kp F7>;
+            key-positions = <5 6>;
             layers = <0>;
         };
 
@@ -54,9 +54,9 @@
             layers = <0>;
         };
 
-        f7 {
-            bindings = <&kp F7>;
-            key-positions = <5 6>;
+        f12 {
+            bindings = <&kp F12>;
+            key-positions = <7 8>;
             layers = <0>;
         };
 
