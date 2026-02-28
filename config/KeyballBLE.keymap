@@ -36,15 +36,9 @@
             layers = <0>;
         };
 
-        f7 {
-            bindings = <&kp F7>;
-            key-positions = <5 6>;
-            layers = <0>;
-        };
-
-        f12 {
-            bindings = <&kp F12>;
-            key-positions = <7 8>;
+        f7_f12 {
+            bindings = <&mt F12 F7>;
+            key-positions = <8 7>;
             layers = <0>;
         };
 
@@ -570,7 +564,7 @@
             bindings = <
 &mt Q TAB               &kp W               &kp E                      &kp R                                    &mt LC(T) T                                                                                          &mt LC(Y) Y                         &kp U  &kp I                &lt 5 O           &mt LEFT_BRACKET P
 &mt LC(A) A             &mt LC(S) S         &mt LG(D) D                &mt LC(F) F                              &mt LC(G) G                   &mt LG(LS(S)) LA(LS(CAPSLOCK))      &mt LA(RIGHT_ARROW) UP_ARROW       &mt LC(H) H                         &kp J  &kp K                &mt AT_SIGN L     &mt RIGHT_BRACKET MINUS
-&mt LEFT_SHIFT Z        &mt LC(X) X         &kp C                      &mt LC(V) V                              &mt LC(B) B                   &lt 6 ENTER                         &mt LA(LEFT_ARROW) DOWN_ARROW      &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD  &mt RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z        &mt LC(X) X         &kp C                      &mt LC(V) V                              &mt LC(B) B                   &lt 6 LS(CAPSLOCK)                  &mt LA(LEFT_ARROW) DOWN_ARROW      &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD  &mt LC(LEFT_SHIFT) SLASH
 &mt LEFT_CONTROL LC(C)  &mt LEFT_WIN LG(E)  &mt LEFT_ALT LG(UP_ARROW)  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 2 SPACE  &mt LS(END) LS(CAPSLOCK)            &lt_exit_AML_on_hold 1 LEFT_ARROW  &lt_exit_AML_on_hold 2 RIGHT_ARROW                                                &mt LS(ENTER) ENTER
             >;
 
