@@ -573,10 +573,10 @@
 
         APP_CTRL {
             bindings = <
-&kp LS(Q)  &mt LG(NUMBER_7) LS(W)  &mt LG(NUMBER_8) LS(E)  &mt LG(NUMBER_9) LS(R)  &kp LS(T)                      &kp LS(Y)  &kp LS(U)  &kp LS(I)   &mt TILDE LS(O)  &mt BACKSLASH LS(P)
-&kp LS(A)  &mt LG(NUMBER_4) LS(S)  &mt LG(NUMBER_5) LS(D)  &mt LG(NUMBER_6) LS(F)  &kp LS(G)  &trans      &trans  &kp LS(H)  &kp LS(J)  &kp LS(K)   &kp LS(L)        &kp LS(UNDER)
-&kp LS(Z)  &mt LG(NUMBER_1) LS(X)  &mt LG(NUMBER_2) LS(C)  &mt LG(NUMBER_3) LS(V)  &kp LS(B)  &trans      &trans  &kp LS(N)  &kp LS(M)  &kp LS(LT)  &kp LS(GT)       &kp LS(QMARK)
-&trans     &trans                  &trans                  &trans                  &trans     &trans      &trans  &trans                                             &trans
+&kp LS(Q)             &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &trans                      &trans  &trans  &kp TILDE      &kp LS(O)    &kp BACKSLASH
+&trans                &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &kp LG(NUMBER_6)  &trans  &trans      &trans  &trans  &trans  &trans         &kp AT_SIGN  &kp LEFT_BRACKET
+&mt LEFT_SHIFT LS(Z)  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans      &trans  &trans  &trans  &kp SEMICOLON  &kp COLON    &kp RIGHT_BRACKET
+&trans                &trans            &trans            &trans            &trans  &trans      &trans  &trans                                      &trans
             >;
         };
 
